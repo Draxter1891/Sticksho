@@ -1,4 +1,4 @@
-# ✦ STICKSHO
+# STICKSHO
 
 ### **Stick it. Own it. STICKSHO.**
 
@@ -22,27 +22,27 @@ Whether you're decorating your laptop, customizing your water bottle, filling up
 
 **We've got something for you.**
 
-### ✦ Anime
+### Anime
 
 For the ones who can recognize a character from a single silhouette.
 
-### ✦ Gaming
+### Gaming
 
 Because your setup deserves more than RGB.
 
-### ✦ Kawaii
+### Kawaii
 
 Cute enough to make you say *"I need this."*
 
-### ✦ Memes
+### Memes
 
 For highly questionable humor and excellent sticker choices.
 
-### ✦ Cartoons
+### Cartoons
 
 A little nostalgia never hurt anybody.
 
-### ✦ Aesthetic
+### Aesthetic
 
 For when your stuff needs to match the vibe.
 
@@ -94,7 +94,7 @@ You know you want to see the stickers.
 
 ### STICKSHO
 
-**Stick it. Own it. STICKSHO.** ✦
+**Stick it. Own it. STICKSHO.**
 
 © 2026 STICKSHO. All rights reserved.
 The source code, brand identity, artwork, product images, and other assets in this repository may not be copied, modified, distributed, or commercially used without permission.
