@@ -37,6 +37,11 @@
       name="twitter:image"
       content="https://res.cloudinary.com/dwl1mgrt4/image/upload/v1789218517/sharePreviewImg_kb1poa.png"
     />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -894,76 +899,12 @@
             className="flex items-center gap-2 group text-left focus:outline-none"
             aria-label="STICKSHO Home"
           >
-            <div className="relative">
-              <svg
-                className={`${className} transition-transform duration-200 group-hover:scale-105`}
-                viewBox="0 0 160 44"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {/* Outer sticker border effect */}
-                <rect
-                  x="2"
-                  y="3"
-                  width="156"
-                  height="38"
-                  rx="8"
-                  fill="#0e0e0e"
-                />
-                <rect
-                  x="2"
-                  y="2"
-                  width="154"
-                  height="36"
-                  rx="8"
-                  fill="#FFE814"
-                  stroke="#0e0e0e"
-                  strokeWidth="2.2"
-                />
-                {/* White inner peel paper */}
-                <rect
-                  x="6"
-                  y="6"
-                  width="144"
-                  height="28"
-                  rx="6"
-                  fill="#FFFDF5"
-                  stroke="#0e0e0e"
-                  strokeWidth="1.6"
-                />
-
-                {/* Bold STICKSHO typography */}
-                <text
-                  x="80"
-                  y="26"
-                  textAnchor="middle"
-                  fontFamily="'Bricolage Grotesque', sans-serif"
-                  fontWeight="800"
-                  fontSize="18"
-                  letterSpacing="0.08em"
-                  fill="#0e0e0e"
-                >
-                  STICKSHO
-                </text>
-
-                {/* Sticker badge corner dots */}
-                <circle
-                  cx="14"
-                  cy="20"
-                  r="3"
-                  fill="#FF4D2D"
-                  stroke="#0e0e0e"
-                  strokeWidth="1.2"
-                />
-                <circle
-                  cx="144"
-                  cy="20"
-                  r="3"
-                  fill="#72F29A"
-                  stroke="#0e0e0e"
-                  strokeWidth="1.2"
-                />
-              </svg>
+            <div className="w-24 h-14">
+              <img
+                src="https://res.cloudinary.com/dwl1mgrt4/image/upload/v1789217426/pgnLOGO_y55hoh.png"
+                alt="Sticksho logo"
+                className="w-full h-full object-cover"
+              />
             </div>
             <span className="hidden sm:inline-block text-[9.5px] font-extrabold tracking-widest bg-mint sticker-border px-1.5 py-0.5 rounded -rotate-2 shadow-sticker-sm">
               DELHI ONLY
@@ -1042,10 +983,10 @@
                     </span>
                     <button
                       onClick={logout}
-                      className="text-[11px] font-bold text-ink/60 hover:text-coral transition underline ml-1"
+                      className="text-[18px] font-bold text-ink/60 hover:text-coral transition ml-1"
                       title="Logout"
                     >
-                      Exit
+                      <i class="ri-logout-circle-r-line"></i>
                     </button>
                   </div>
                 ) : (
@@ -1464,7 +1405,7 @@
                     <p className="text-sm sm:text-base text-ink/80 max-w-xl font-medium leading-relaxed">
                       Designed for chaotic laptops, stainless gym bottles,
                       scooters, and metro diaries. Heavy-duty laminated vinyl
-                      hand-packed in South Delhi. No payment gateway fuss —
+                      hand-packed in North East Delhi. No payment gateway fuss -
                       browse, build your pack, and order straight to WhatsApp.
                     </p>
                   </div>
@@ -1493,7 +1434,7 @@
                         </div>
                       </div>
                       <div className="text-xs leading-none">
-                        <div className="font-extrabold">4,900+ Slapped</div>
+                        <div className="font-extrabold">1150+ Slapped</div>
                         <div className="text-ink/60 text-[10px]">
                           in Delhi NCR
                         </div>
@@ -1506,7 +1447,7 @@
                 <div className="lg:col-span-5 bg-lemon sticker-border-thick rounded-3xl p-6 shadow-sticker relative flex flex-col justify-between overflow-hidden">
                   <div className="flex items-center justify-between">
                     <span className="bg-white sticker-border rounded-full px-3 py-1 text-xs font-extrabold shadow-sticker-sm">
-                      ★ SOUTH DELHI STUDIO SPEC
+                      ★ STICKSHO STUDIO
                     </span>
                     <span className="bg-coral text-white sticker-border rounded-full px-3 py-1 text-xs font-extrabold shadow-sticker-sm -rotate-3">
                       ₹149 - ₹349
@@ -1714,13 +1655,13 @@
                   BEHIND THE BRAND
                 </span>
                 <h2 className="font-display font-extrabold text-3xl sm:text-4xl leading-tight">
-                  Born in a South Delhi room. Made for your everyday gear.
+                  Born in a North-East Delhi room. Made for your everyday gear.
                 </h2>
                 <p className="text-sm text-ink/80 leading-relaxed font-medium">
                   STICKSHO started with a single silhouette vinyl cutter and an
                   obsession with quality illustration. Instead of flimsy paper
                   labels that peel off after two days, we formulate vinyl
-                  specifically for people who carry their laptops everywhere —
+                  specifically for people who carry their laptops everywhere,
                   from yellow line metro trains to midnight library shifts.
                 </p>
                 <div className="grid grid-cols-2 gap-4 pt-2">
@@ -1751,7 +1692,7 @@
                     className="w-full h-72 sm:h-80 object-cover rounded-xl sticker-border"
                   />
                   <div className="absolute -bottom-3 -right-3 bg-white sticker-border rounded-xl px-4 py-2 font-display font-extrabold text-xs shadow-sticker rotate-2">
-                    📍 Shahpur Jat, New Delhi
+                    📍 Shahdara, New Delhi
                   </div>
                 </div>
               </div>
@@ -3336,7 +3277,7 @@
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    placeholder="e.g. Naina Sharma"
+                    placeholder="e.g. John Doe"
                     className="w-full bg-sand/40 sticker-border rounded-xl px-3.5 py-2 text-xs sm:text-sm font-semibold outline-none focus:bg-white"
                   />
                 </div>
@@ -3349,7 +3290,7 @@
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="naina@example.com"
+                    placeholder="john@example.com"
                     className="w-full bg-sand/40 sticker-border rounded-xl px-3.5 py-2 text-xs sm:text-sm font-semibold outline-none focus:bg-white"
                   />
                 </div>
