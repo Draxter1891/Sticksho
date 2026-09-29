@@ -167,19 +167,21 @@ const PRODUCTS = [
             "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=700&q=80",
           ],
         },
+        
         {
-          id: 12,
-          name: "Matcha & Strawberry Bakery — 9 pcs",
-          price: 189,
-          category: "Kawaii / Cute",
+          id: 13,
+          name: "One piece Jolly Roger Logo Sticker - 10 pcs",
+          price: 119,
+          category: "Anime / Cool",
           rating: 4.8,
           reviews: 195,
-          badge: "SWEET",
+          badge: "STICKER PACK",
           finish: "Matte Pastel",
-          desc: "Soft matcha rolls, strawberry milk cartons, and smiling melon pans. Super gentle pastel tones with bold cartoon outlines.",
+          desc: "A Full Pack OF Straw hats Jolly Roger pack All 10 Members.",
           images: [
-            "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=700&q=80",
-            "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=700&q=80",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/straw%20hats%20Jolly%20roger%20sticker%20pack/download.jfif?updatedAt=1790684882094",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/straw%20hats%20Jolly%20roger%20sticker%20pack/download.jfif?updatedAt=1790684882094",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/straw%20hats%20Jolly%20roger%20sticker%20pack/download.jfif?updatedAt=1790684882094",
           ],
         },
-]
+    ]
