@@ -347,251 +347,303 @@
       // 2. STICKER PRODUCT CATALOG
       // Realistic dummy stickers with rich packs & art
       // ==========================================
-      const CATEGORIES = [
-        "All",
-        "Anime",
-        "Cartoons",
-        "Gaming",
-        "Pop Culture",
-        "Kawaii / Cute",
-        "Aesthetic",
-        "Memes / Funny",
-        "Original Art",
-      ];
+      const CATEGORIES = ["All", "Anime", "Cartoon", "Text"];
 
       const CATEGORY_META = {
         Anime: {
           color: "#FFE814",
           badgeBg: "bg-lemon",
-          emoji: "⛩️",
+          bannerURL:
+            "https://ik.imagekit.io/wvhxclxrt/OtakunCategoryBanner/tr:q-10,f-auto/anime.png",
           desc: "Shonen idols & studio classics",
         },
-        Cartoons: {
+        Cartoon: {
           color: "#FF4D2D",
           badgeBg: "bg-coral",
-          emoji: "📺",
+          bannerURL:
+            "https://ik.imagekit.io/wvhxclxrt/OtakunCategoryBanner/tr:q-10,f-auto/cartoon.png",
           desc: "90s nostalgia & morning cartoons",
         },
-        Gaming: {
-          color: "#C4B5FD",
-          badgeBg: "bg-lilac",
-          emoji: "🎮",
-          desc: "Elden Ring, Zelda & retro pixels",
-        },
-        "Pop Culture": {
-          color: "#38BDF8",
-          badgeBg: "bg-cyan",
-          emoji: "⭐",
-          desc: "Iconic moments, TV & indie vibes",
-        },
-        "Kawaii / Cute": {
-          color: "#72F29A",
-          badgeBg: "bg-mint",
-          emoji: "🐰",
-          desc: "Chibi snacks, boba & fluffy pets",
-        },
-        Aesthetic: {
-          color: "#FDE047",
-          badgeBg: "bg-yellow-200",
-          emoji: "✨",
-          desc: "Y2K, vaporwave & lo-fi poetry",
-        },
-        "Memes / Funny": {
-          color: "#FCA5A5",
-          badgeBg: "bg-red-200",
-          emoji: "💀",
-          desc: "Desi humor & viral gold",
-        },
-        "Original Art": {
-          color: "#E9D5FF",
-          badgeBg: "bg-purple-200",
-          emoji: "🎨",
-          desc: "Hand-crafted by Delhi artists",
+        Text: {
+          color: "#8e8e8e",
+          badgBg: "bg-red",
+          bannerURL:
+            "https://ik.imagekit.io/wvhxclxrt/OtakunCategoryBanner/tr:q-10,f-auto/text.png",
+          desc: "Funny text stickers that make you stand out of the crowd",
         },
       };
 
       const PRODUCTS = [
         {
           id: 1,
-          name: "Shinobi Legends Pack — 12 pcs",
-          price: 249,
+          name: "One piece Jolly Roger Logo Sticker - 10 pcs",
+          price: 119,
           category: "Anime",
-          rating: 4.9,
-          reviews: 218,
-          badge: "BESTSELLER",
-          finish: "Matte Vinyl (Zero Glare)",
-          desc: "Heavy-duty waterproof vinyl cutouts of Kakashi, Itachi, Naruto & the Akatsuki clouds. Engineered to survive humid Delhi metro transits, laptop backpacks, and chai spills.",
+          rating: 4.8,
+          reviews: 195,
+          badge: "STICKER PACK",
+          finish: "Matte Pastel",
+          desc: "A Full Pack OF Straw hats Jolly Roger pack All 10 Members.",
           images: [
-            "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=700&q=80",
-            "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=700&q=80",
-            "https://images.unsplash.com/photo-1563089145-599997674d42?w=700&q=80",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/straw%20hats%20Jolly%20roger%20sticker%20pack/download.jfif?updatedAt=1790684882094",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/straw%20hats%20Jolly%20roger%20sticker%20pack/download.jfif?updatedAt=1790684882094",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/straw%20hats%20Jolly%20roger%20sticker%20pack/download.jfif?updatedAt=1790684882094",
           ],
         },
         {
           id: 2,
-          name: "Spirited Forest & Bathhouse — 10 pcs",
-          price: 279,
-          category: "Anime",
-          rating: 4.8,
-          reviews: 142,
-          badge: "POPULAR",
-          finish: "Satin Foil Accent",
-          desc: "Dreamy, serene die-cut stickers featuring No-Face, Haku dragon, soot sprites, and Calcifer cooking breakfast. Soft muted colors with UV-safe lamination.",
+          name: "UnproDUCKtive Sticker - 12 pcs",
+          price: 15,
+          category: "Cartoon",
+          rating: 4.6,
+          reviews: 165,
+          badge: "STICKER PACK",
+          finish: "Matte Pastel",
+          desc: "A Cool Duck Sticker For Those Who Can Not Be Productive At Work All Time.",
           images: [
-            "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=700&q=80",
-            "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=700&q=80",
-            "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=700&q=80",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/UNPRO(DUCK)TIVE%20sticker/unproDUCKtive.jfif?updatedAt=1790446602249",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/UNPRO(DUCK)TIVE%20sticker/unproducktive.png?updatedAt=1790446605225",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/UNPRO(DUCK)TIVE%20sticker/unproDUCKtive.jfif?updatedAt=1790446602249",
           ],
         },
         {
           id: 3,
-          name: "Bikini Bottom Chaotic Memes — 14 pcs",
-          price: 199,
-          category: "Cartoons",
-          rating: 4.7,
-          reviews: 308,
-          badge: "CULT HIT",
-          finish: "Glossy Waterproof",
-          desc: "Mocking SpongeBob, Handsome Squidward, and Panicking Patrick in high-definition vinyl. Made to be slapped on hydroflasks, skateboard decks, and helmet visors.",
+          name: "Overthinkers Club Sticker - 10 pcs",
+          price: 15,
+          category: "Cartoon",
+          rating: 4.5,
+          reviews: 183,
+          badge: "STICKER PACK",
+          finish: "Matte Pastel",
+          desc: "A Cool Overthinker Sticker For Those Who Can Not Think Straight.",
           images: [
-            "https://images.unsplash.com/photo-1596727147705-61a532a659bd?w=700&q=80",
-            "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=700&q=80",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/OVERTHINKERS%20member%20sticker/3518505954793372.jfif?updatedAt=1790446197848",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/OVERTHINKERS%20member%20sticker/overthinkers%20club.png?updatedAt=1790446200135",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/OVERTHINKERS%20member%20sticker/3518505954793372.jfif?updatedAt=1790446197848",
           ],
         },
         {
           id: 4,
-          name: "Boba Pets & Chibi Bakery — 8 pcs",
-          price: 179,
-          category: "Kawaii / Cute",
-          rating: 4.9,
-          reviews: 420,
-          badge: "CUTE AS HECK",
-          finish: "Soft-Touch Matte",
-          desc: "Chubby bunnies sipping brown sugar milk tea, sleeping red pandas in croissants, and round shiba inus. Bubble-free easy peel backing.",
+          name: "Let That Shit Go Sticker - 15 pcs",
+          price: 15,
+          category: "Cartoon",
+          rating: 4.8,
+          reviews: 158,
+          badge: "STICKER PACK",
+          finish: "Matte Pastel",
+          desc: "A Cool Sticker For Those Who Want To Relax And Do Not Want To Keep Hang On It.",
           images: [
-            "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=700&q=80",
-            "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=700&q=80",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/LET%20THAT%20SHIT%20GO%20sticker/492649952998668.jfif?updatedAt=1790440868980",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/LET%20THAT%20SHIT%20GO%20sticker/let%20that%20shit%20go.png?updatedAt=1790440869404",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/LET%20THAT%20SHIT%20GO%20sticker/492649952998668.jfif?updatedAt=1790440868980",
           ],
         },
         {
           id: 5,
-          name: "Elden Lands & Runes Set — 7 pcs",
-          price: 299,
-          category: "Gaming",
-          rating: 4.9,
-          reviews: 95,
-          badge: "HARDCORE",
-          finish: "Holographic Rainbow Foil",
-          desc: "You Died, Ranni the Witch, Malenia's blade, and golden Erdtree seals. Thick 320 GSM vinyl resistant to rain, scratches, and friction inside travel bags.",
+          name: "StuDYING Sticker - 10 pcs",
+          price: 15,
+          category: "Cartoon",
+          rating: 4.7,
+          reviews: 185,
+          badge: "STICKER PACK",
+          finish: "Matte Pastel",
+          desc: "A Cool Sticker For Students Who Do Not Want To Study.",
           images: [
-            "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=700&q=80",
-            "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=700&q=80",
-            "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=700&q=80",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/STU(DYING)%20sticker/_Skeleton%20Studying_%20Sticker%20for%20Sale%20by%20Gkinoki.jfif?updatedAt=1790446551681",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/STU(DYING)%20sticker/stuDYING.png?updatedAt=1790446552449",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/STU(DYING)%20sticker/_Skeleton%20Studying_%20Sticker%20for%20Sale%20by%20Gkinoki.jfif?updatedAt=1790446551681",
           ],
         },
         {
           id: 6,
-          name: "Indie Cinema & Neon Noir — 8 pcs",
-          price: 229,
-          category: "Pop Culture",
-          rating: 4.6,
-          reviews: 79,
-          badge: "INDIE",
-          finish: "Matte Film",
-          desc: "A24-inspired motel keys, retro neon diner signs, film cameras, and cinema marquee quotes. Styled for film students, notebook covers, and camera cases.",
+          name: "Who Cares? Sticker - 10 pcs",
+          price: 15,
+          category: "Text",
+          rating: 4.4,
+          reviews: 145,
+          badge: "STICKER PACK",
+          finish: "Matte Pastel",
+          desc: "A Cool Text Sticker For Students Who Do Not Cares About Anything .",
           images: [
-            "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=700&q=80",
-            "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=700&q=80",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/WHO%20CARES%20_%20sticker/Who%20Cares_%20Sticker.jfif?updatedAt=1790446725237",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/WHO%20CARES%20_%20sticker/Who%20Cares_%20Sticker.jfif?updatedAt=1790446725237",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/WHO%20CARES%20_%20sticker/Who%20Cares_%20Sticker.jfif?updatedAt=1790446725237",
           ],
         },
         {
           id: 7,
-          name: "Y2K Cyber Heart & Chrome — 11 pcs",
-          price: 189,
-          category: "Aesthetic",
-          rating: 4.8,
-          reviews: 164,
-          badge: "TRENDING",
-          finish: "Mirror Chrome Holographic",
-          desc: "Liquid metal tribals, retro flip phones, metallic butterflies, and cyber sigilism stars. Reflects daylight with intense metallic prism reflections.",
+          name: "Wasted Sticker - 10 pcs",
+          price: 15,
+          category: "Text",
+          rating: 4.3,
+          reviews: 125,
+          badge: "STICKER PACK",
+          finish: "Matte Pastel",
+          desc: "A Cool Wasted Sticker For GTA Fans.",
           images: [
-            "https://images.unsplash.com/photo-1550686041-366ad85a1355?w=700&q=80",
-            "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=700&q=80",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/WASTED%20sticker/Wasted%20Cool%20Sticker.jfif?updatedAt=1790446691414",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/WASTED%20sticker/Wasted.png?updatedAt=1790446694492",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/WASTED%20sticker/Wasted%20Cool%20Sticker.jfif?updatedAt=1790446691414",
           ],
         },
         {
           id: 8,
-          name: "Desi Metro & Chai Chaos — 10 pcs",
-          price: 169,
-          category: "Memes / Funny",
-          rating: 4.9,
-          reviews: 388,
-          badge: "DELHI SPECIAL",
-          finish: "Waterproof Matte",
-          desc: "'Agla Station Rajiv Chowk Hai', steaming kulhad chai, auto meter broken jokes, and Delhi cat stares. Pure unadulterated capital city humor.",
+          name: "Warning Sticker - 10 pcs",
+          price: 15,
+          category: "Text",
+          rating: 4.7,
+          reviews: 185,
+          badge: "STICKER PACK",
+          finish: "Matte Pastel",
+          desc: "A Cool Warning Sticker For Students.",
           images: [
-            "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=700&q=80",
-            "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=700&q=80",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/WARNING%20studend%20sticker/A%20very%20tired%20college%20student%20sticker.jfif?updatedAt=1790446678232",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/WARNING%20studend%20sticker/A%20very%20tired%20college%20student%20sticker.jfif?updatedAt=1790446678232",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/WARNING%20studend%20sticker/A%20very%20tired%20college%20student%20sticker.jfif?updatedAt=1790446678232",
           ],
         },
         {
           id: 9,
-          name: "Midnight Doodles by Naina — 6 pcs",
-          price: 349,
-          category: "Original Art",
-          rating: 5.0,
-          reviews: 64,
-          badge: "LIMITED RUN",
-          finish: "Premium Textured Matte",
-          desc: "Exclusive hand-illustrated Delhi street dogs, balcony plants, and midnight moon gazers designed in North East Delhi. Individually numbered small-batch drop.",
+          name: "Out Of Memory Sticker - 10 pcs",
+          price: 15,
+          category: "Cartoon",
+          rating: 4.7,
+          reviews: 185,
+          badge: "STICKER PACK",
+          finish: "Matte Pastel",
+          desc: "A Cool Sticker For Those Who Do Not Remembers .",
           images: [
-            "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=700&q=80",
-            "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=700&q=80",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/OUT%20OF%20MEMORY%20sticker/Out%20of%20Memory%20Brain%20Sticker.jfif?updatedAt=1790446168045",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/OUT%20OF%20MEMORY%20sticker/out%20of%20memory.png?updatedAt=1790446168601",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/OUT%20OF%20MEMORY%20sticker/Out%20of%20Memory%20Brain%20Sticker.jfif?updatedAt=1790446168045",
           ],
         },
         {
           id: 10,
-          name: "Grand Line Pirate Bounties — 9 pcs",
-          price: 259,
-          category: "Anime",
-          rating: 4.8,
-          reviews: 172,
-          badge: "HOT",
-          finish: "Aged Parchment Vinyl",
-          desc: "Wanted posters of the Straw Hat crew with distressed vintage paper effects printed on durable, scratch-resistant automotive-grade vinyl.",
+          name: "Absolutely Fucking Not Sticker - 10 pcs",
+          price: 15,
+          category: "Text",
+          rating: 4.7,
+          reviews: 185,
+          badge: "STICKER PACK",
+          finish: "Matte Pastel",
+          desc: "A Cool Text Sticker For Those Who Does Not Give Up.",
           images: [
-            "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=700&q=80",
-            "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=700&q=80",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/ABSOLUTELY%20fking%20not%20sticker/Absolutely%20Not%20Sticker.jfif?updatedAt=1790438634657",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/ABSOLUTELY%20fking%20not%20sticker/Absolutely%20Not%20Sticker.png?updatedAt=1790438635201",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/ABSOLUTELY%20fking%20not%20sticker/Absolutely%20Not%20Sticker.jfif?updatedAt=1790438634657",
           ],
         },
         {
           id: 11,
-          name: "8-Bit Arcade Dungeon Crawl — 12 pcs",
-          price: 199,
-          category: "Gaming",
+          name: "Not My Problem Sticker - 10 pcs",
+          price: 15,
+          category: "Cartoon",
           rating: 4.7,
-          reviews: 110,
-          badge: "RETRO",
-          finish: "Pixel Gloss",
-          desc: "Pixel potions, retro hearts, save game disks, and CRT pixelated ghosts. 100% weather resistant, UV cured inks that don't fade in Indian sun.",
+          reviews: 164,
+          badge: "STICKER PACK",
+          finish: "Matte Pastel",
+          desc: "A Cool Sticker For Those Who Does Not Meddle With Others Problem.",
           images: [
-            "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=700&q=80",
-            "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=700&q=80",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/NOT%20MY%20PROBLEM%20sticker/meh.jfif?updatedAt=1790446094293",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/NOT%20MY%20PROBLEM%20sticker/not%20my%20problem.png?updatedAt=1790446094988",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/NOT%20MY%20PROBLEM%20sticker/meh.jfif?updatedAt=1790446094293",
           ],
         },
         {
           id: 12,
-          name: "Matcha & Strawberry Bakery — 9 pcs",
-          price: 189,
-          category: "Kawaii / Cute",
-          rating: 4.8,
+          name: "Use It Sticker - 10 pcs",
+          price: 15,
+          category: "Cartoon",
+          rating: 4.9,
           reviews: 195,
-          badge: "SWEET",
+          badge: "STICKER PACK",
           finish: "Matte Pastel",
-          desc: "Soft matcha rolls, strawberry milk cartons, and smiling melon pans. Super gentle pastel tones with bold cartoon outlines.",
+          desc: "A Cool Cat Sticker .",
           images: [
-            "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=700&q=80",
-            "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=700&q=80",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/USE%20IT%20cat%20sticker/Use-it.jfif?updatedAt=1790446631816",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/USE%20IT%20cat%20sticker/use%20it.png?updatedAt=1790446632621",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/USE%20IT%20cat%20sticker/Use-it.jfif?updatedAt=1790446631816",
+          ],
+        },
+        {
+          id: 13,
+          name: "MonaJacked Sticker - 10 pcs",
+          price: 15,
+          category: "Cartoon",
+          rating: 4.7,
+          reviews: 185,
+          badge: "STICKER PACK",
+          finish: "Matte Pastel",
+          desc: "A Cool Sticker Of Gym Rat Monalisa.",
+          images: [
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/MONAJACKED%20sticker/_.jfif?updatedAt=1790445907792",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/MONAJACKED%20sticker/_.jfif?updatedAt=1790445907792",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/MONAJACKED%20sticker/_.jfif?updatedAt=1790445907792",
+          ],
+        },
+        {
+          id: 14,
+          name: "HotMess Sticker - 10 pcs",
+          price: 15,
+          category: "Text",
+          rating: 4.3,
+          reviews: 152,
+          badge: "STICKER PACK",
+          finish: "Matte Pastel",
+          desc: "A Cool Sticker For Hot People.",
+          images: [
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/HotMess%20sticker/37365871904930835.jfif?updatedAt=1790439805722",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/HotMess%20sticker/HotMess.png?updatedAt=1790439806329",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/HotMess%20sticker/37365871904930835.jfif?updatedAt=1790439805722",
+          ],
+        },
+        {
+          id: 15,
+          name: "Luffy Nani? Sticker - 15 pcs",
+          price: 15,
+          category: "Anime",
+          rating: 4.9,
+          reviews: 175,
+          badge: "STICKER PACK",
+          finish: "Matte Pastel",
+          desc: "A Cool Anime Sticker For One Piece Fans.",
+          images: [
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/LUFFY%20nani_%20sticker/2111131073718295.jfif?updatedAt=1790445603509",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/LUFFY%20nani_%20sticker/nani.png?updatedAt=1790445603911",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/LUFFY%20nani_%20sticker/2111131073718295.jfif?updatedAt=1790445603509",
+          ],
+        },
+        {
+          id: 16,
+          name: "Zoro Nothing Happened Sticker - 18 pcs",
+          price: 15,
+          category: "Anime",
+          rating: 4.7,
+          reviews: 185,
+          badge: "STICKER PACK",
+          finish: "Matte Pastel",
+          desc: "A Cool Anime Sticker For One Piece Fans.",
+          images: [
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/ZORO%20NOTHING%20HAPPENED%20sticker/1063060687076350825.jfif?updatedAt=1790446749620",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/ZORO%20NOTHING%20HAPPENED%20sticker/1063060687076350825.jfif?updatedAt=1790446749620",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/ZORO%20NOTHING%20HAPPENED%20sticker/1063060687076350825.jfif?updatedAt=1790446749620",
+          ],
+        },
+        {
+          id: 17,
+          name: "Luffy Gear 2 Sticker - 10 pcs",
+          price: 15,
+          category: "Anime",
+          rating: 4.7,
+          reviews: 185,
+          badge: "STICKER PACK",
+          finish: "Matte Pastel",
+          desc: "A Cool Anime Sticker For One Piece Fans.",
+          images: [
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/LUFFY%20GEAR2%20sticker/997969598700154650.jfif?updatedAt=1790445576080",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/LUFFY%20GEAR2%20sticker/997969598700154650.jfif?updatedAt=1790445576080",
+            "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/LUFFY%20GEAR2%20sticker/997969598700154650.jfif?updatedAt=1790445576080",
           ],
         },
       ];
@@ -1500,7 +1552,8 @@
                 {CATEGORIES.filter((c) => c !== "All").map((catName) => {
                   const meta = CATEGORY_META[catName] || {
                     color: "#FFE814",
-                    emoji: "✨",
+                    bannerURL:
+                      "https://ik.imagekit.io/wvhxclxrt/OtakunCategoryBanner/tr:q-10,f-auto/default.png",
                     desc: "Curated",
                   };
                   const count = PRODUCTS.filter(
@@ -1515,28 +1568,33 @@
                           `/products?category=${encodeURIComponent(catName)}`,
                         )
                       }
-                      className="text-left bg-white sticker-border rounded-2xl p-4 shadow-sticker-sm hover:shadow-sticker hover:-translate-y-1 transition group relative overflow-hidden flex flex-col justify-between h-36 sm:h-40"
+                      className="text-left bg-white sticker-border rounded-2xl shadow-sticker-sm hover:shadow-sticker hover:-translate-y-1 transition group relative overflow-hidden flex flex-col justify-between h-36 sm:h-40"
                       style={{
                         background: `radial-gradient(180px 140px at 90% 10%, ${meta.color}55 0%, #FFFFFF 85%)`,
                       }}
                     >
-                      <div className="flex items-start justify-between">
-                        <span className="text-3xl group-hover:scale-110 transition-transform">
-                          {meta.emoji}
-                        </span>
-                        <span className="text-[10px] font-extrabold bg-sand sticker-border px-2 py-0.5 rounded-full">
+                      <div className="flex items-start justify-between relative">
+                        <img
+                          className="absolute left-0 w-full group-hover:scale-110 transition-transform"
+                          src={
+                            meta.bannerURL ||
+                            "https://ik.imagekit.io/wvhxclxrt/OtakunCategoryBanner/tr:q-10,f-auto/default.png"
+                          }
+                          alt={meta.name}
+                        />
+                        <span className="absolute top-2 text-[10px] font-extrabold bg-sand sticker-border px-2 py-0.5 rounded-full">
                           {count} {count === 1 ? "pack" : "packs"}
                         </span>
                       </div>
 
                       <div>
-                        <h3 className="font-display font-extrabold text-sm sm:text-base leading-tight group-hover:text-coral transition">
+                        <h3 className="absolute top-2 right-2 rounded-2xl px-2 bg-gray-100 font-display font-extrabold text-sm sm:text-base leading-tight group-hover:text-coral transition">
                           {catName}
                         </h3>
-                        <p className="text-[10px] sm:text-[11px] text-ink/60 font-medium line-clamp-1 mt-0.5">
-                          {meta.desc}
-                        </p>
                       </div>
+                      <p className="absolute bottom-2 bg-gray-50 rounded-xl px-2 text-[10px] sm:text-[11px] text-ink font-medium line-clamp-1 mt-0.5">
+                        {meta.desc}
+                      </p>
                     </button>
                   );
                 })}
@@ -2211,7 +2269,7 @@
         }
 
         return (
-          <div className="space-y-8 pb-16">
+          <div className="gspace-y-8 pb-16">
             <div className="border-b-2 border-ink pb-4">
               <span className="text-xs font-extrabold tracking-wider text-coral uppercase">
                 DELHI DISPATCH BAG
