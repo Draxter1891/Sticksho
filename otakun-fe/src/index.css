@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Space+Grotesk:wght@300..700&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0e0e0e;
+  --color-paper: #fffdf5;
+  --color-sand: #f5efe0;
+  --color-lemon: #ffe814;
+  --color-coral: #ff4d2d;
+  --color-mint: #72f29a;
+  --color-lilac: #c4b5fd;
+  --color-cyan: #38bdf8;
+
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    background: #fffdf5;
+    color: #0e0e0e;
+    font-family: "Space Grotesk", sans-serif;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+/* OTAKUN DESIGN SYSTEM */
+@layer utilities {
+  .sticker-border {
+    border: 2px solid #0e0e0e;
+  }
+
+  .sticker-border-thick {
+    border: 3px solid #0e0e0e;
+  }
+
+  .shadow-sticker {
+    box-shadow: 4px 4px 0 #0e0e0e;
+  }
+
+  .shadow-sticker-sm {
+    box-shadow: 3px 3px 0 #0e0e0e;
+  }
+
+  .shadow-sticker-lg {
+    box-shadow: 6px 6px 0 #0e0e0e;
+  }
+
+  .shadow-sticker-inset {
+    box-shadow: inset 2px 2px 0 rgba(14, 14, 14, 0.12);
+  }
+
+  .font-display {
+    font-family: "Bricolage Grotesque", sans-serif;
+  }
+
+  .font-body {
+    font-family: "Space Grotesk", sans-serif;
+  }
+
+  .peel-corner {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .peel-corner::after {
+    content: "";
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    width: 28px;
+    height: 28px;
+    background: #fffdf5;
+    border-left: 2px solid #0e0e0e;
+    border-top: 2px solid #0e0e0e;
+    transform: skew(-12deg);
+    pointer-events: none;
+  }
+
+  .gspace-y-8> :not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+
+/* ANIMATIONS */
+
+@keyframes wiggle {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-1deg);
+  }
+
+  75% {
+    transform: rotate(1deg);
+  }
+}
+
+@keyframes toast-in {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@layer utilities {
+  .animate-wiggle {
+    animation: wiggle 0.35s ease-in-out;
+  }
+
+  .toast-anim {
+    animation: toast-in 0.2s ease-out;
+  }
+}
