@@ -7,7 +7,7 @@ const OtakunLogo = ({ className = "" }) => {
       <img
         src={LOGO_URL}
         alt="STICKSHO"
-        className="h-10 w-auto object-contain"
+        className="h-25 w-auto object-contain"
       />
 
       <span className="sticker-border rounded-full bg-lemon px-2 py-0.5 font-display text-[9px] font-extrabold uppercase leading-none">

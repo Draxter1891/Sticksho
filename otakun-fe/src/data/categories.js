@@ -19,7 +19,7 @@ export const CATEGORY_META = {
 
   Text: {
     color: "#8e8e8e",
-    badgeBg: "bg-red",
+    badgeBg: "bg-sand",
     bannerURL:
       "https://ik.imagekit.io/wvhxclxrt/OtakunCategoryBanner/tr:q-10,f-auto/text.png",
     desc: "Funny text stickers that make you stand out of the crowd",

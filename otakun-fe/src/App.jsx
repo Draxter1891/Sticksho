@@ -1,11 +1,18 @@
 import AppRoutes from "./routes/AppRoutes";
-import { AppProvider } from "./context/AppContext";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
-    <AppProvider>
+    <>
+      <Toaster
+        position="bottom-right"
+        containerStyle={{
+          bottom: 20,
+          right: 20,
+        }}
+      />
       <AppRoutes />
-    </AppProvider>
+    </>
   );
 };
 

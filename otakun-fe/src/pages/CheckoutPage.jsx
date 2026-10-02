@@ -13,9 +13,9 @@ const CheckoutPage = () => {
   const { cartDetails, user, clearCart } = useApp();
   const navigate = useNavigate();
 
-  // --------------------------------------------------
+  
   // Guard: redirect if cart is empty
-  // --------------------------------------------------
+  
 
   useEffect(() => {
     if (cartDetails.items.length === 0) {
@@ -23,9 +23,9 @@ const CheckoutPage = () => {
     }
   }, [cartDetails.items, navigate]);
 
-  // --------------------------------------------------
+  
   // Form state
-  // --------------------------------------------------
+  
 
   const [fullName, setFullName] = useState(user ? user.name : "");
   const [phone, setPhone] = useState(user ? user.phone : "");
@@ -42,9 +42,9 @@ const CheckoutPage = () => {
   const [pincode, setPincode] = useState("");
   const [deliveryInstructions, setDeliveryInstructions] = useState("");
 
-  // --------------------------------------------------
+  
   // Validation + success modal state
-  // --------------------------------------------------
+  
 
   const [errors, setErrors] = useState({});
 
@@ -57,9 +57,9 @@ const CheckoutPage = () => {
 
   const localityInputRef = useRef(null);
 
-  // --------------------------------------------------
+  
   // Locality filtering
-  // --------------------------------------------------
+  
 
   const availableLocalities = useMemo(() => {
     if (!district || !DELHI_LOCATION_DATA[district]) {
@@ -77,9 +77,9 @@ const CheckoutPage = () => {
     );
   }, [district, localitySearch]);
 
-  // --------------------------------------------------
+  
   // District change
-  // --------------------------------------------------
+  
 
   const handleDistrictChange = (e) => {
     const newDistrict = e.target.value;
@@ -96,9 +96,9 @@ const CheckoutPage = () => {
     }));
   };
 
-  // --------------------------------------------------
+  
   // Locality selection
-  // --------------------------------------------------
+  
 
   const handleSelectLocality = (locality) => {
     setSelectedLocality(locality);
@@ -111,9 +111,9 @@ const CheckoutPage = () => {
     }));
   };
 
-  // --------------------------------------------------
+  
   // Progressive unlocking
-  // --------------------------------------------------
+  
 
   const isLocalityUnlocked = Boolean(district);
 
@@ -131,9 +131,9 @@ const CheckoutPage = () => {
 
   const isInstructionsUnlocked = isPincodeUnlocked;
 
-  // --------------------------------------------------
+  
   // Validation
-  // --------------------------------------------------
+  
 
   const validate = () => {
     const validationErrors = {};
@@ -194,9 +194,9 @@ const CheckoutPage = () => {
     return Object.keys(validationErrors).length === 0;
   };
 
-  // --------------------------------------------------
+  
   // Generate WhatsApp order
-  // --------------------------------------------------
+  
 
   const handlePlaceOrderWhatsApp = (e) => {
     e.preventDefault();
@@ -274,9 +274,9 @@ const CheckoutPage = () => {
     window.open(waUrl, "_blank");
   };
 
-  // --------------------------------------------------
+  
   // Done after WhatsApp flow
-  // --------------------------------------------------
+  
 
   const handleOrderDone = () => {
     setIsSubmittedModalOpen(false);
@@ -318,6 +318,7 @@ const CheckoutPage = () => {
           localitySearch={localitySearch}
           setLocalitySearch={setLocalitySearch}
           selectedLocality={selectedLocality}
+          setSelectedLocality={setSelectedLocality}
           handleSelectLocality={handleSelectLocality}
           availableLocalities={availableLocalities}
           isLocalityDropdownOpen={isLocalityDropdownOpen}

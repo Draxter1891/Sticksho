@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate, useParams } from "react-router";
+import { useLoaderData, useNavigate } from "react-router";
 
 import ProductGallery from "../components/product/ProductGallery";
 import ProductInfo from "../components/product/ProductInfo";
@@ -8,7 +8,7 @@ import RelatedProducts from "../components/product/RelatedProducts";
 import { PRODUCTS } from "../data/products";
 
 const ProductDetailPage = () => {
-  const { id } = useParams();
+  const { id } = useLoaderData();
   const navigate = useNavigate();
 
   const [selectedImageIdx, setSelectedImageIdx] = useState(0);
@@ -45,9 +45,9 @@ const ProductDetailPage = () => {
 
   return (
     <div className="space-y-12 pb-16">
-      {/* =========================
+      {/*
           BREADCRUMBS
-      ========================== */}
+      */}
       <div className="flex items-center gap-2 text-xs font-bold text-ink/60">
         <button
           type="button"
@@ -74,9 +74,9 @@ const ProductDetailPage = () => {
         </span>
       </div>
 
-      {/* =========================
+      {/*
           MAIN DETAIL CARD
-      ========================== */}
+      */}
       <div className="grid gap-8 rounded-3xl bg-white p-6 shadow-sticker sticker-border-thick sm:p-10 lg:grid-cols-12 lg:gap-12">
         {/* Gallery */}
         <ProductGallery
@@ -89,9 +89,9 @@ const ProductDetailPage = () => {
         <ProductInfo product={product} />
       </div>
 
-      {/* =========================
+      {/*
           CUSTOMER REVIEWS
-      ========================== */}
+      */}
       <section className="space-y-6 rounded-3xl bg-white p-6 shadow-sticker sticker-border sm:p-8">
         <div className="flex items-center justify-between border-b-2 border-ink pb-4">
           <h2 className="font-display text-xl font-extrabold sm:text-2xl">
@@ -163,9 +163,9 @@ const ProductDetailPage = () => {
         </div>
       </section>
 
-      {/* =========================
+      {/*
           RELATED PRODUCTS
-      ========================== */}
+      */}
       <RelatedProducts
         product={product}
         products={PRODUCTS}

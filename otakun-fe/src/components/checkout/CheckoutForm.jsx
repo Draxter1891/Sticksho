@@ -1,5 +1,8 @@
 import { useRef, useMemo } from "react";
-import { DELHI_DISTRICTS, DELHI_LOCATION_DATA } from "../../data/delhiLocations";
+import {
+  DELHI_DISTRICTS,
+  DELHI_LOCATION_DATA,
+} from "../../data/delhiLocations";
 
 const CheckoutForm = ({
   fullName,
@@ -9,12 +12,14 @@ const CheckoutForm = ({
   email,
   setEmail,
   district,
-  setDistrict,
+
+  handleDistrictChange,
   localitySearch,
   setLocalitySearch,
   selectedLocality,
   setSelectedLocality,
   isLocalityDropdownOpen,
+  handleSelectLocality,
   setIsLocalityDropdownOpen,
   houseDetails,
   setHouseDetails,
@@ -67,9 +72,7 @@ const CheckoutForm = ({
    */
   const isLocalityUnlocked = Boolean(district);
 
-  const isHouseUnlocked = Boolean(
-    district && selectedLocality,
-  );
+  const isHouseUnlocked = Boolean(district && selectedLocality);
 
   const isStreetUnlocked = Boolean(
     isHouseUnlocked && houseDetails.trim().length > 0,
@@ -81,42 +84,13 @@ const CheckoutForm = ({
 
   const isInstructionsUnlocked = isPincodeUnlocked;
 
-  const handleDistrictChange = (event) => {
-    const newDistrict = event.target.value;
-
-    setDistrict(newDistrict);
-    setSelectedLocality("");
-    setLocalitySearch("");
-    setIsLocalityDropdownOpen(false);
-
-    setErrors((prev) => ({
-      ...prev,
-      district: "",
-      locality: "",
-    }));
-  };
-
-  const handleSelectLocality = (locality) => {
-    setSelectedLocality(locality);
-    setLocalitySearch(locality);
-    setIsLocalityDropdownOpen(false);
-
-    setErrors((prev) => ({
-      ...prev,
-      locality: "",
-    }));
-  };
 
   return (
     <div className="lg:col-span-7 rounded-3xl bg-white p-6 shadow-sticker sticker-border sm:p-8">
-      <form
-        onSubmit={onSubmit}
-        className="space-y-6"
-        noValidate
-      >
-        {/* =========================
+      <form onSubmit={onSubmit} className="space-y-6" noValidate>
+        {/*
             1. CONTACT INFORMATION
-        ========================== */}
+         */}
         <div className="space-y-4">
           <div className="flex items-center gap-2 border-b-2 border-ink pb-2">
             <span className="grid h-6 w-6 place-items-center rounded-full bg-lemon text-xs font-black sticker-border">
@@ -169,9 +143,7 @@ const CheckoutForm = ({
                 maxLength={10}
                 value={phone}
                 onChange={(event) => {
-                  setPhone(
-                    event.target.value.replace(/\D/g, ""),
-                  );
+                  setPhone(event.target.value.replace(/\D/g, ""));
 
                   setErrors((prev) => ({
                     ...prev,
@@ -219,9 +191,9 @@ const CheckoutForm = ({
           </div>
         </div>
 
-        {/* =========================
+        {/* 
             2. DELHI ADDRESS
-        ========================== */}
+         */}
         <div className="space-y-4 pt-4">
           <div className="flex items-center justify-between border-b-2 border-ink pb-2">
             <div className="flex items-center gap-2">
@@ -270,9 +242,7 @@ const CheckoutForm = ({
                 onChange={handleDistrictChange}
                 className="w-full cursor-pointer rounded-xl bg-sand/40 px-3.5 py-2.5 text-xs font-extrabold outline-none sticker-border focus:bg-white sm:text-sm"
               >
-                <option value="">
-                  -- Choose Delhi District --
-                </option>
+                <option value="">-- Choose Delhi District --</option>
 
                 {DELHI_DISTRICTS.map((item) => (
                   <option key={item} value={item}>
@@ -289,13 +259,12 @@ const CheckoutForm = ({
             </div>
           </div>
 
-          {/* =========================
+          {/* 
               LOCALITY COMBOBOX
-          ========================== */}
+          = */}
           <div className="relative">
             <label className="mb-1 block text-xs font-extrabold">
               Locality / Sub-Division Area *
-
               {!isLocalityUnlocked && (
                 <span className="ml-1 font-normal text-ink/40">
                   (Select district above first)
@@ -351,9 +320,7 @@ const CheckoutForm = ({
                     <button
                       type="button"
                       key={locality}
-                      onClick={() =>
-                        handleSelectLocality(locality)
-                      }
+                      onClick={() => handleSelectLocality(locality)}
                       className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-xs font-bold transition ${
                         selectedLocality === locality
                           ? "bg-lemon text-ink"
@@ -382,7 +349,6 @@ const CheckoutForm = ({
           <div>
             <label className="mb-1 block text-xs font-extrabold">
               House / Flat / Building / Floor *
-
               {!isHouseUnlocked && (
                 <span className="ml-1 font-normal text-ink/40">
                   (Requires Locality)
@@ -417,7 +383,6 @@ const CheckoutForm = ({
           <div>
             <label className="mb-1 block text-xs font-extrabold">
               Street / Area / Locality Details *
-
               {!isStreetUnlocked && (
                 <span className="ml-1 font-normal text-ink/40">
                   (Requires House Details)
@@ -454,7 +419,6 @@ const CheckoutForm = ({
             <div>
               <label className="mb-1 block text-xs font-extrabold">
                 Pincode (6 Digits) *
-
                 {!isPincodeUnlocked && (
                   <span className="ml-1 font-normal text-ink/40">
                     (Unlock above)
@@ -468,9 +432,7 @@ const CheckoutForm = ({
                 disabled={!isPincodeUnlocked}
                 value={pincode}
                 onChange={(event) => {
-                  setPincode(
-                    event.target.value.replace(/\D/g, ""),
-                  );
+                  setPincode(event.target.value.replace(/\D/g, ""));
 
                   setErrors((prev) => ({
                     ...prev,
@@ -490,9 +452,7 @@ const CheckoutForm = ({
 
             {/* City */}
             <div>
-              <label className="mb-1 block text-xs font-extrabold">
-                City
-              </label>
+              <label className="mb-1 block text-xs font-extrabold">City</label>
 
               <input
                 type="text"
@@ -513,18 +473,16 @@ const CheckoutForm = ({
               type="text"
               disabled={!isInstructionsUnlocked}
               value={deliveryInstructions}
-              onChange={(event) =>
-                setDeliveryInstructions(event.target.value)
-              }
+              onChange={(event) => setDeliveryInstructions(event.target.value)}
               placeholder="e.g. Ring bell, deliver after 4 PM, call guard"
               className="w-full rounded-xl bg-sand/40 px-3.5 py-2.5 text-xs font-semibold outline-none sticker-border disabled:cursor-not-allowed disabled:bg-sand/20 focus:bg-white sm:text-sm"
             />
           </div>
         </div>
 
-        {/* =========================
+        {/* 
             SUBMIT
-        ========================== */}
+        = */}
         <div className="border-t-2 border-ink pt-4">
           <button
             type="submit"
@@ -542,9 +500,8 @@ const CheckoutForm = ({
           </button>
 
           <p className="mt-2 text-center text-[11px] font-medium text-ink/60">
-            Clicking opens WhatsApp chat with{" "}
-            <strong>9650727640</strong> with your order
-            pre-populated.
+            Clicking opens WhatsApp chat with <strong>9650727640</strong> with
+            your order pre-populated.
           </p>
         </div>
       </form>

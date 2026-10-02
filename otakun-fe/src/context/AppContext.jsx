@@ -6,7 +6,7 @@ import {
   useMemo,
   useState,
 } from "react";
-import { useNavigate } from "react-router";
+import { Outlet, useNavigate } from "react-router";
 import toast from "react-hot-toast";
 
 import { PRODUCTS } from "../data/products";
@@ -16,9 +16,9 @@ const AppContext = createContext(null);
 
 // STORAGE KEYS
 
-const LS_GUEST_CART = "sticksho_guest_cart";
-const LS_GUEST_WISH = "sticksho_guest_wish";
-const LS_AUTH_USER = "sticksho_auth_user";
+const LS_GUEST_CART = "otakun_guest_cart";
+const LS_GUEST_WISH = "otakun_guest_wish";
+const LS_AUTH_USER = "otakun_auth_user";
 
 // STORAGE HELPERS
 
@@ -38,7 +38,7 @@ const getStorageData = (key, fallback) => {
 
 // APP PROVIDER
 
-export const AppProvider = ({ children }) => {
+export const AppProvider = () => {
   const navigate = useNavigate();
 
   // AUTHENTICATION STATE
@@ -50,7 +50,7 @@ export const AppProvider = ({ children }) => {
   const [cart, setCart] = useState(() => {
     const savedUser = getStorageData(LS_AUTH_USER, null);
 
-    const key = savedUser ? `sticksho_cart_${savedUser.email}` : LS_GUEST_CART;
+    const key = savedUser ? `otakun_cart_${savedUser.email}` : LS_GUEST_CART;
 
     return getStorageData(key, []);
   });
@@ -60,7 +60,7 @@ export const AppProvider = ({ children }) => {
   const [wishlist, setWishlist] = useState(() => {
     const savedUser = getStorageData(LS_AUTH_USER, null);
 
-    const key = savedUser ? `sticksho_wish_${savedUser.email}` : LS_GUEST_WISH;
+    const key = savedUser ? `otakun_wish_${savedUser.email}` : LS_GUEST_WISH;
 
     return getStorageData(key, []);
   });
@@ -87,7 +87,7 @@ export const AppProvider = ({ children }) => {
   // CART STORAGE SYNC
 
   useEffect(() => {
-    const key = user ? `sticksho_cart_${user.email}` : LS_GUEST_CART;
+    const key = user ? `otakun_cart_${user.email}` : LS_GUEST_CART;
 
     localStorage.setItem(key, JSON.stringify(cart));
   }, [cart, user]);
@@ -95,7 +95,7 @@ export const AppProvider = ({ children }) => {
   // WISHLIST STORAGE SYNC
 
   useEffect(() => {
-    const key = user ? `sticksho_wish_${user.email}` : LS_GUEST_WISH;
+    const key = user ? `otakun_wish_${user.email}` : LS_GUEST_WISH;
 
     localStorage.setItem(key, JSON.stringify(wishlist));
   }, [wishlist, user]);
@@ -221,9 +221,9 @@ export const AppProvider = ({ children }) => {
 
       // 1. Retrieve previous account data
 
-      const priorCart = getStorageData(`sticksho_cart_${normalizedEmail}`, []);
+      const priorCart = getStorageData(`otakun_cart_${normalizedEmail}`, []);
 
-      const priorWish = getStorageData(`sticksho_wish_${normalizedEmail}`, []);
+      const priorWish = getStorageData(`otakun_wish_${normalizedEmail}`, []);
 
       // 2. Merge guest cart with account cart
 
@@ -261,12 +261,12 @@ export const AppProvider = ({ children }) => {
       localStorage.setItem(LS_AUTH_USER, JSON.stringify(newUser));
 
       localStorage.setItem(
-        `sticksho_cart_${normalizedEmail}`,
+        `otakun_cart_${normalizedEmail}`,
         JSON.stringify(mergedCart),
       );
 
       localStorage.setItem(
-        `sticksho_wish_${normalizedEmail}`,
+        `otakun_wish_${normalizedEmail}`,
         JSON.stringify(mergedWishlist),
       );
 
@@ -279,7 +279,7 @@ export const AppProvider = ({ children }) => {
 
       setIsAuthOpen(false);
 
-      addToast(`Welcome back, ${newUser.name}! Cart synced ✨`);
+      addToast(`Welcome back, ${newUser.name}! Cart synced`);
 
       // 8. Continue checkout if that was
       //    the original user intention
@@ -304,7 +304,7 @@ export const AppProvider = ({ children }) => {
     setCart([]);
     setWishlist([]);
 
-    addToast("Logged out of Delhi account", "info");
+    addToast("Logged out successfully", "info");
 
     navigate("/");
   }, [navigate, addToast]);
@@ -348,6 +348,7 @@ export const AppProvider = ({ children }) => {
     };
   }, [cart]);
 
+  //Values for the context
   const value = useMemo(
     () => ({
       // Auth
@@ -394,7 +395,11 @@ export const AppProvider = ({ children }) => {
     ],
   );
 
-  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
+  return (
+    <AppContext.Provider value={value}>
+      <Outlet />
+    </AppContext.Provider>
+  );
 };
 
 export const useApp = () => {
