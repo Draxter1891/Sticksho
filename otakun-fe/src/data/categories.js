@@ -1,4 +1,11 @@
-export const CATEGORIES = ["All", "Anime", "Cartoon", "Text"];
+export const CATEGORIES = [
+  "All",
+  "Anime",
+  "Cartoon",
+  "Text",
+  "AnimalMeme",
+  "Marvels",
+];
 
 export const CATEGORY_META = {
   Anime: {
@@ -6,15 +13,15 @@ export const CATEGORY_META = {
     badgeBg: "bg-lemon",
     bannerURL:
       "https://ik.imagekit.io/wvhxclxrt/OtakunCategoryBanner/tr:q-10,f-auto/anime.png",
-    desc: "Shonen idols & studio classics",
+    desc: "Classics of anime",
   },
 
   Cartoon: {
     color: "#FF4D2D",
-    badgeBg: "bg-coral",
+    badgeBg: "bg-mint",
     bannerURL:
       "https://ik.imagekit.io/wvhxclxrt/OtakunCategoryBanner/tr:q-10,f-auto/cartoon.png",
-    desc: "90s nostalgia & morning cartoons",
+    desc: "Nostalgic cartoon stickers",
   },
 
   Text: {
@@ -23,5 +30,17 @@ export const CATEGORY_META = {
     bannerURL:
       "https://ik.imagekit.io/wvhxclxrt/OtakunCategoryBanner/tr:q-10,f-auto/text.png",
     desc: "Funny text stickers that make you stand out of the crowd",
+  },
+  AnimalMeme: {
+    color: "#8e8e8e",
+    badgeBg: "bg-cyan",
+    bannerURL: "",
+    desc: "Funny animal memes",
+  },
+  Marvels: {
+    color: "#8e8e8e",
+    badgeBg: "bg-coral",
+    bannerURL: "",
+    desc: "Funny animal memes",
   },
 };

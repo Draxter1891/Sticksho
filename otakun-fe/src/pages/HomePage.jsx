@@ -213,7 +213,7 @@ const HomePage = () => {
                   <div className="relative flex items-start justify-between">
                     <img
                       className="absolute left-0 w-full transition-transform group-hover:scale-110"
-                      src={meta.bannerURL}
+                      src={meta.bannerURL||"https://ik.imagekit.io/wvhxclxrt/OtakunCategoryBanner/tr:q-10,f-auto/default.png"}
                       alt={categoryName}
                     />
 
