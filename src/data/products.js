@@ -1,4 +1,4 @@
-const PRODUCTS = [
+export const PRODUCTS = [
         
         {
           id: 1,
@@ -612,7 +612,7 @@ const PRODUCTS = [
           id: 39,
           name: "Sad Cat Sticker - 10 pcs",
           price: 15,
-          category: "Animal Meme",
+          category: "AnimalMeme",
           rating: 4.6,
           reviews: 175,
           badge: "STICKER PACK",
@@ -660,7 +660,7 @@ const PRODUCTS = [
           id: 42,
           name: "Party Raccoon Sticker - 10 pcs",
           price: 15,
-          category: "Animal Meme",
+          category: "AnimalMeme",
           rating: 4.9,
           reviews: 155,
           badge: "STICKER PACK",
@@ -692,7 +692,7 @@ const PRODUCTS = [
           id: 44,
           name: "Offline Dino Sticker - 10 pcs",
           price: 15,
-          category: "Animal Meme",
+          category: "AnimalMeme",
           rating: 4.6,
           reviews: 175,
           badge: "STICKER PACK",
@@ -948,7 +948,7 @@ const PRODUCTS = [
           id: 60,
           name: "Loading Duck Sticker - 10 pcs",
           price: 15,
-          category: "Animal Meme",
+          category: "AnimalMeme",
           rating: 4.7,
           reviews: 185,
           badge: "STICKER PACK",
@@ -1028,7 +1028,7 @@ const PRODUCTS = [
           id: 65,
           name: "Its Too People Outside Sticker - 10 pcs",
           price: 15,
-          category: "Animal Meme",
+          category: "AnimalMeme",
           rating: 4.7,
           reviews: 185,
           badge: "STICKER PACK",
@@ -1120,3 +1120,4 @@ const PRODUCTS = [
             "https://ik.imagekit.io/wvhxclxrt/Otakun%20Studio/EVERYTHING%20IS%20FINE%20sticker/Everything%20Is%20Fine%20Sticker.jfif?updatedAt=1790439391874",
           ],
         },
+      ]
