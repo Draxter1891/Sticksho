@@ -120,7 +120,7 @@ const Footer = () => {
             </p>
 
             <a
-              href="https://wa.me/919650727640?text=Hi%20STICKSHO%20Studio!%20I%20have%20a%20question%20about%20stickers"
+              href="https://wa.me/919650727640?text=Hi%20OTAKUN%20Studio!%20I%20have%20a%20question%20about%20stickers"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-xl border border-ink bg-[#25D366] px-3.5 py-2 text-xs font-extrabold text-white shadow-sticker-sm transition hover:-translate-y-0.5"
@@ -138,7 +138,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t-2 border-ink/10 pt-6 text-[11px] font-semibold text-ink/60 sm:flex-row">
           <div>
-            © {new Date().getFullYear()} STICKSHO Delhi.
+            © {new Date().getFullYear()} OTAKUN Delhi.
             Hand-packed with love. No payment gateway hassle.
           </div>
 

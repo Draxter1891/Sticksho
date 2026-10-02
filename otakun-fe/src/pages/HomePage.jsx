@@ -14,9 +14,9 @@ const HomePage = () => {
 
   return (
     <div className="space-y-16 pb-12">
-      {/* =========================
+      {/* 
           HERO SECTION
-      ========================== */}
+       */}
       <section className="relative mt-4 sm:mt-6">
         <div className="grid items-stretch gap-6 lg:grid-cols-12">
           {/* Left Hero Card */}
@@ -27,7 +27,7 @@ const HomePage = () => {
                 ⚡ DROP 04 LIVE IN DELHI
               </span>
 
-              <span className="rotate-[2deg] rounded-full bg-lemon px-3 py-1 text-xs font-extrabold tracking-wide shadow-sticker-sm sticker-border">
+              <span className="rotate-2 rounded-full bg-lemon px-3 py-1 text-xs font-extrabold tracking-wide shadow-sticker-sm sticker-border">
                 🛵 24-48 HR METRO DELIVERY
               </span>
 
@@ -40,13 +40,10 @@ const HomePage = () => {
               <h1 className="font-display text-4xl font-extrabold leading-[0.92] tracking-tight sm:text-6xl lg:text-[68px]">
                 STICKERS
                 <br />
-
                 <span className="mt-1 inline-block -rotate-1 rounded-xl border-2 border-ink bg-lemon px-3 py-0.5 shadow-sticker-sm">
                   THAT STICK
                 </span>
-
                 <br />
-
                 WITH YOU.
               </h1>
 
@@ -88,9 +85,7 @@ const HomePage = () => {
 
                 <div className="text-xs leading-none">
                   <div className="font-extrabold">1150+ Slapped</div>
-                  <div className="text-[10px] text-ink/60">
-                    in Delhi NCR
-                  </div>
+                  <div className="text-[10px] text-ink/60">in Delhi NCR</div>
                 </div>
               </div>
             </div>
@@ -100,7 +95,7 @@ const HomePage = () => {
           <div className="relative flex flex-col justify-between overflow-hidden rounded-3xl bg-lemon p-6 shadow-sticker sticker-border-thick lg:col-span-5">
             <div className="flex items-center justify-between">
               <span className="rounded-full bg-white px-3 py-1 text-xs font-extrabold shadow-sticker-sm sticker-border">
-                ★ STICKSHO STUDIO
+                ★ OTAKUN STUDIO
               </span>
 
               <span className="-rotate-3 rounded-full bg-coral px-3 py-1 text-xs font-extrabold text-white shadow-sticker-sm sticker-border">
@@ -110,7 +105,7 @@ const HomePage = () => {
 
             {/* Sticker mockups */}
             <div className="my-6 grid grid-cols-2 gap-3.5">
-              <div className="rotate-[-2deg] rounded-2xl bg-white p-3 shadow-sticker-sm transition hover:rotate-0 sticker-border">
+              <div className="-rotate-2 rounded-2xl bg-white p-3 shadow-sticker-sm transition hover:rotate-0 sticker-border">
                 <img
                   src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=500&q=80"
                   className="h-32 w-full rounded-xl border border-ink/10 object-cover sm:h-36"
@@ -126,7 +121,7 @@ const HomePage = () => {
                 </div>
               </div>
 
-              <div className="rotate-[3deg] rounded-2xl bg-white p-3 shadow-sticker-sm transition hover:rotate-0 sticker-border">
+              <div className="rotate-3 rounded-2xl bg-white p-3 shadow-sticker-sm transition hover:rotate-0 sticker-border">
                 <img
                   src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&q=80"
                   className="h-32 w-full rounded-xl border border-ink/10 object-cover sm:h-36"
@@ -163,9 +158,9 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* =========================
+      {/* 
           CATEGORY EXPLORATION
-      ========================== */}
+       */}
       <section className="space-y-6">
         <div className="flex flex-col justify-between gap-2 border-b-2 border-ink pb-4 sm:flex-row sm:items-end">
           <div>
@@ -207,9 +202,7 @@ const HomePage = () => {
                   type="button"
                   onClick={() =>
                     navigate(
-                      `/products?category=${encodeURIComponent(
-                        categoryName,
-                      )}`,
+                      `/products?category=${encodeURIComponent(categoryName)}`,
                     )
                   }
                   className="group relative flex h-36 flex-col justify-between overflow-hidden rounded-2xl bg-white text-left shadow-sticker-sm transition hover:-translate-y-1 hover:shadow-sticker sm:h-40 sticker-border"
@@ -243,9 +236,9 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* =========================
+      {/* 
           FEATURED DROPS
-      ========================== */}
+       */}
       <section className="space-y-6">
         <div className="flex items-center justify-between border-b-2 border-ink pb-4">
           <div>
@@ -274,9 +267,9 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* =========================
+      {/* 
           QUALITY PROOF
-      ========================== */}
+       */}
       <section className="rounded-3xl bg-sand/60 p-6 shadow-sticker sticker-border-thick sm:p-10">
         <div className="mb-8 max-w-3xl">
           <span className="mb-3 inline-block rounded-full bg-ink px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-lemon">
@@ -336,9 +329,9 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* =========================
+      {/* 
           BEHIND THE BRAND
-      ========================== */}
+       */}
       <section className="grid items-center gap-8 rounded-3xl bg-white p-6 shadow-sticker sticker-border sm:p-10 lg:grid-cols-12">
         <div className="space-y-4 lg:col-span-6">
           <span className="text-xs font-extrabold uppercase tracking-widest text-coral">
@@ -350,7 +343,7 @@ const HomePage = () => {
           </h2>
 
           <p className="text-sm font-medium leading-relaxed text-ink/80">
-            STICKSHO started with a single silhouette vinyl cutter and an
+            OTAKUN started with a single silhouette vinyl cutter and an
             obsession with quality illustration. Instead of flimsy paper labels
             that peel off after two days, we formulate vinyl specifically for
             people who carry their laptops everywhere, from yellow line metro
@@ -389,7 +382,7 @@ const HomePage = () => {
             />
 
             <div className="absolute -bottom-3 -right-3 rotate-2 rounded-xl bg-white px-4 py-2 font-display text-xs font-extrabold shadow-sticker sticker-border">
-              📍 Shahdara, New Delhi
+              Shahdara, New Delhi
             </div>
           </div>
         </div>

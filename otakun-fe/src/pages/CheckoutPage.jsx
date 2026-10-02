@@ -218,7 +218,7 @@ const CheckoutPage = () => {
       .join("\n");
 
     const messageLines = [
-      "STICKSHO ORDER",
+      "OTAKUN ORDER",
       "",
 
       "Customer Details",

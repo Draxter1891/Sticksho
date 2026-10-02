@@ -6,7 +6,7 @@ const OtakunLogo = ({ className = "" }) => {
     <div className={`flex items-center gap-2 ${className}`}>
       <img
         src={LOGO_URL}
-        alt="STICKSHO"
+        alt="OTAKUN"
         className="h-25 w-auto object-contain"
       />
 
