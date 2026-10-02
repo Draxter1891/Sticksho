@@ -3,7 +3,7 @@ import MainLayout from "../components/layout/MainLayout";
 import ProductsPage from "../pages/ProductsPage";
 import ProductDetailPage from "../pages/ProductDetailPage";
 import CartPage from "../pages/CartPage";
-import WishlistPage from "../pages/WishlistPage";
+import WishlistPage from "../pages/WishListPage";
 import CheckoutPage from "../pages/CheckoutPage";
 import HomePage from "../pages/HomePage";
 import { createBrowserRouter, RouterProvider } from "react-router";
