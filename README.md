@@ -1,10 +1,10 @@
-# STICKSHO
+# OTAKUN
 
-### **Stick it. Own it. STICKSHO.**
+### **Stick it. Own it. OTAKUN.**
 
 > **Tiny stickers. Big personality.**
 
-Welcome to **STICKSHO** — a sticker brand built for people who think their laptops, bottles, notebooks, walls, and basically everything else could use a little more personality.
+Welcome to **OTAKUN** — a sticker brand built for people who think their laptops, bottles, notebooks, walls, and basically everything else could use a little more personality.
 
 We make stickers inspired by the things people actually obsess over — **anime, cartoons, gaming, memes, cute stuff, pop culture, aesthetics, and everything in between.**
 
@@ -16,7 +16,7 @@ Just **stick-worthy stuff.**
 
 ## 🫳 Peel. Stick. Repeat.
 
-STICKSHO is all about turning ordinary things into **your things**.
+OTAKUN is all about turning ordinary things into **your things**.
 
 Whether you're decorating your laptop, customizing your water bottle, filling up your journal, or just collecting stickers you absolutely didn't need...
 
@@ -52,13 +52,13 @@ For when your stuff needs to match the vibe.
 
 Discover the collection, find something that feels *very you*, and make your everyday stuff a little less ordinary.
 
-### **[→ Explore STICKSHO](https://sticksho.vercel.app)**
+### **[→ Explore OTAKUN](https://OTAKUN.vercel.app)**
 
 ---
 
 ## ⚡ Built for the brand
 
-This website is the digital home of STICKSHO — designed around:
+This website is the digital home of OTAKUN — designed around:
 
 * 🎨 A playful, product-first experience
 * 🏷️ Category-based sticker discovery
@@ -76,7 +76,7 @@ No complicated checkout.
 
 ## 📍 Currently sticking in Delhi
 
-STICKSHO currently delivers across **Delhi**.
+OTAKUN currently delivers across **Delhi**.
 
 More places may get stickers in the future.
 
@@ -84,7 +84,7 @@ More places may get stickers in the future.
 
 ## 🌐 The Store
 
-**[sticksho.vercel.app](https://sticksho.vercel.app)**
+**[OTAKUN.vercel.app](https://OTAKUN.vercel.app)**
 
 Go on.
 
@@ -92,9 +92,9 @@ You know you want to see the stickers.
 
 ---
 
-### STICKSHO
+### OTAKUN
 
-**Stick it. Own it. STICKSHO.**
+**Stick it. Own it. OTAKUN.**
 
-© 2026 STICKSHO. All rights reserved.
+© 2026 OTAKUN. All rights reserved.
 The source code, brand identity, artwork, product images, and other assets in this repository may not be copied, modified, distributed, or commercially used without permission.
