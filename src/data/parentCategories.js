@@ -8,4 +8,7 @@ export const parentCategory = [
   {
     name: "Posters",
   },
+  {
+    name: "Journal",
+  },
 ];
